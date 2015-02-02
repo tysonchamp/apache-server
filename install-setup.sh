@@ -39,7 +39,7 @@ echo "Setting up Virtual Host Configaration Files"
 echo " "
 echo "================================================================"
 sh vhostconf.sh
-mkdir /var/www/html
+mkdir /var/www/$1
 chown -R www-data:www-data /var/www/*
 chmod -R 755 /var/www/*
 echo "Installing Webmin Control Panel and It's Dependencis"
