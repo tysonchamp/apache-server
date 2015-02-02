@@ -8,9 +8,9 @@ How to use this script:
 1st download all the .sh files and keep it in your /root directory.
 2nd use the below command to start the installation.
 
-sh install-setup.sh <your-domain-name-here>
+sh install-setup.sh "your-domain-name-here"
 
-Note : replace <your-domain-name-here> with your "fully qulified domain name". For example sh install-setup.sh tysonchamp.com
+Note : replace "your-domain-name-here" with your "fully qulified domain name". For example sh install-setup.sh tysonchamp.com
 
 I'll add more fetures to this script in future. If you found any mistakes or have suggestions then please contact me here:
 
