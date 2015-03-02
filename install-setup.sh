@@ -25,7 +25,11 @@ echo "LAMP Stack with OpenSSL and phpMyAdmin"
 echo "Installation Process Starts:"
 echo " "
 echo "================================================================"
-apt-get install apache2 php5 openssl -y && apt-get install mysql-server -y && apt-get install phpmyadmin -y
+apt-get install openssl -y && apt-get install apache2 -y
+echo "================================================================"
+apt-get install php5 php5-gd php5-common php5-curl php5-gmp -y && apt-get install mysql-server -y
+echo "================================================================"
+apt-get install phpmyadmin -y
 #echo "Include /etc/phpmyadmin/apache.conf" | cat >> /etc/apache2/apache2.conf
 a2enmod ssl && service apache2 restart
 echo " "
