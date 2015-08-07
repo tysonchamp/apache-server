@@ -42,7 +42,7 @@ a2enmod rewrite
 echo "Setting up Virtual Host Configaration Files"
 echo " "
 echo "================================================================"
-sh vhostconf.sh
+sh vhostconf.sh $1
 mkdir /var/www/$1
 chown -R www-data:www-data /var/www/*
 chmod -R 755 /var/www/*
