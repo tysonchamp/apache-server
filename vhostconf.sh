@@ -9,6 +9,11 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 				echo "        ServerName $1" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        ServerAlias www.$1" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/default-ssl.conf
+				echo "	      Options Indexes FollowSymLinks MultiViews
+				              # changed from None to FileInfo
+				              AllowOverride FileInfo
+				              Order allow,deny
+				              allow from all"
 				echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
@@ -24,6 +29,11 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 				echo "        ServerName $1" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        ServerAlias www.$1" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/default-ssl.conf
+				echo "	      Options Indexes FollowSymLinks MultiViews
+				              # changed from None to FileInfo
+				              AllowOverride FileInfo
+				              Order allow,deny
+				              allow from all"
 				echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
@@ -41,6 +51,11 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 		echo "        ServerName $1" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        ServerAlias www.$1" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/default-ssl.conf
+		echo "	      Options Indexes FollowSymLinks MultiViews
+		              # changed from None to FileInfo
+		              AllowOverride FileInfo
+		              Order allow,deny
+		              allow from all"
 		echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
@@ -57,6 +72,11 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 			echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
+			echo "	        Options Indexes FollowSymLinks MultiViews
+			                # changed from None to FileInfo
+			                AllowOverride FileInfo
+			                Order allow,deny
+			                allow from all"
 			echo "		DirectoryIndex index.php" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "</VirtualHost>" | cat >> /etc/apache2/sites-available/000-default.conf
@@ -65,6 +85,11 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 			echo "<VirtualHost *:80>" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
+			echo "	        Options Indexes FollowSymLinks MultiViews
+			                # changed from None to FileInfo
+			                AllowOverride FileInfo
+			                Order allow,deny
+			                allow from all"
 			echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DirectoryIndex index.php" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/000-default.conf
@@ -76,6 +101,11 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 		echo "<VirtualHost *:80>" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
+		echo "	        Options Indexes FollowSymLinks MultiViews
+		                # changed from None to FileInfo
+		                AllowOverride FileInfo
+		                Order allow,deny
+		                allow from all"
 		echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		DirectoryIndex index.php" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/000-default.conf
