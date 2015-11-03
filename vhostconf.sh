@@ -15,7 +15,7 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 				              AllowOverride FileInfo
 				              Order allow,deny
 				              allow from all
-				              </Dirctory>"
+				              </Dirctory>" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
@@ -37,7 +37,7 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 				              AllowOverride FileInfo
 				              Order allow,deny
 				              allow from all
-				              </Dirctory>"
+				              </Dirctory>" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 				echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
@@ -61,7 +61,7 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 		              AllowOverride FileInfo
 		              Order allow,deny
 		              allow from all
-		              </Directory>"
+		              </Directory>" | cat >> /etc/apache2/sites-available/default-ssl.con
 		echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
@@ -84,7 +84,7 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 		              		AllowOverride FileInfo
 		              		Order allow,deny
 		              		allow from all
-		              		</Directory>"
+		              		</Directory>" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DirectoryIndex index.php" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "</VirtualHost>" | cat >> /etc/apache2/sites-available/000-default.conf
@@ -99,7 +99,7 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 		              		AllowOverride FileInfo
 		              		Order allow,deny
 		              		allow from all
-		              		</Directory>"
+		              		</Directory>" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DirectoryIndex index.php" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/000-default.conf
@@ -117,7 +117,7 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 		                AllowOverride FileInfo
 		                Order allow,deny
 		                allow from all
-		                </Directory>"
+		                </Directory>" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		DirectoryIndex index.php" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/000-default.conf
