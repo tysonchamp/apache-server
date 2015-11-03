@@ -78,7 +78,7 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 			echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
-			echo "	        <Dirctory /var/www/>
+			echo "	        <Directory /var/www/>
 			      		Options Indexes FollowSymLinks MultiViews
 		              		# changed from None to FileInfo
 		              		AllowOverride FileInfo
@@ -93,7 +93,7 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 			echo "<VirtualHost *:80>" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
-			echo "	        <Dirctory /var/www/>
+			echo "	        <Directory /var/www/>
 			      		Options Indexes FollowSymLinks MultiViews
 		              		# changed from None to FileInfo
 		              		AllowOverride FileInfo
@@ -111,7 +111,7 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 		echo "<VirtualHost *:80>" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 		echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
-		echo "	        <Dirctory /var/www/>
+		echo "	        <Directory /var/www/>
 			        Options Indexes FollowSymLinks MultiViews
 		                # changed from None to FileInfo
 		                AllowOverride FileInfo
