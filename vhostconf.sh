@@ -61,7 +61,7 @@ if [ -e /etc/apache2/sites-available/default-ssl.conf.backup ]
 		              AllowOverride FileInfo
 		              Order allow,deny
 		              allow from all
-		              </Directory>" | cat >> /etc/apache2/sites-available/default-ssl.con
+		              </Directory>" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        ErrorLog ${APACHE_LOG_DIR}/error.log" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        CustomLog ${APACHE_LOG_DIR}/access.log combined" | cat >> /etc/apache2/sites-available/default-ssl.conf
 		echo "        SSLEngine on" | cat >> /etc/apache2/sites-available/default-ssl.conf
