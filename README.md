@@ -20,3 +20,9 @@ twitter : @tysonchampno1
 email : tyson.granger181@gmail.com
 
 Website : www.tysonchamp.com
+
+# Updates:
+
+24.01.2016
+
+1. Script has been updated to 1.0 with some new changes. Now users will have choice on installing webmin control panel and ssl certificates. Also http and https apache file config has been splited into two files for better management.
