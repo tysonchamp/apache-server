@@ -101,3 +101,5 @@ if [ $bol = 'yes' ] || [ $bol = 'y' ]
     	echo "You skiped the Webmin Control Panel Installation...!!"
     fi
 fi
+echo "Installation Complete! If you had any error contact www.tysonchamp.com or"
+echo "Open a issue request on https://github.com/tysonchamp/apache-server"
