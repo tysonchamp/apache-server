@@ -4,12 +4,12 @@ Description:
 I had created this script for Setup Apache Webserver including php5, Mysql-Server, Webmin Control Panel and OpenSSL(with self sign SSL) in Ubuntu. Now sharing this script to help specially who have no linux knowledge. This script is really easy to use.
 
 How to use this script:
-1st download all the .sh files and keep it in your /root directory.
-2nd use the below command to start the installation.
+1st download all the files.
+2nd use the below command to start the installation(You will need root access to excute this script).
 
-sh install-setup.sh "your-domain-name-here"
+sh setup.sh "your-domain-name-here"
 
-Note : replace "your-domain-name-here" with your "fully qulified domain name". For example sh install-setup.sh tysonchamp.com
+Note : replace "your-domain-name-here" with your "fully qulified domain name". For example sh setup.sh tysonchamp.com
 
 I'll add more fetures to this script in future. If you found any mistakes or have suggestions then please contact me here:
 
