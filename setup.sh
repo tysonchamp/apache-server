@@ -19,8 +19,6 @@
 #
 if [ $( whoami | grep root | wc -l ) != 1 ];
 	then
-	echo " "
-	echo " "
 	echo "You need to be root to properly work this script\n"
 	echo "Please switch user to the root user using below command\n"
 	echo "sudo su"
