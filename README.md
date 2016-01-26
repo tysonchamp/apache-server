@@ -26,3 +26,7 @@ Website : www.tysonchamp.com
 24.01.2016
 
 1. Script has been updated to 1.0 with some new changes. Now users will have choice on installing webmin control panel and ssl certificates. Also http and https apache file config has been splited into two files for better management.
+
+27.01.2016
+
+1. Some minor changes has been done and permission checking has been added.
