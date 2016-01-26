@@ -36,6 +36,8 @@ apt-get install openssl -y && apt-get install apache2 -y
 echo "================================================================"
 apt-get install php5 php5-gd php5-common php5-curl php5-gmp -y && apt-get install mysql-server -y
 echo "================================================================"
+apt-get install sendmail -y
+echo "================================================================"
 apt-get install phpmyadmin -y
 #echo "Include /etc/phpmyadmin/apache.conf" | cat >> /etc/apache2/apache2.conf
 echo "================================================================"
