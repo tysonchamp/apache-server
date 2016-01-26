@@ -13,16 +13,28 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
+# Version 1.1
 # 
-# 
-# 
+# Check to see is the user is root
+#
+if [ $( whoami | grep root | wc -l ) != 1 ];
+	then
+	echo " "
+	echo " "
+	echo "You need to be root to properly work this script\n"
+	echo "Please switch user to the root user using below command\n"
+	echo "sudo su"
+	exit 1
+fi
 
+# Check if user has provided the domain name
 if [ -z $1 ]
 	then
 		echo "Provide website address without http://www. e.g sh install-setup.sh tysonchamp.com!"
 		exit 1
 fi
 
+# Installing LAMP Stack & pHpMyAdmin
 echo "Installing Latest Updates Process starts:"
 echo " "
 echo "================================================================"
@@ -52,6 +64,7 @@ chmod -R 755 /var/www/*
 echo "================================================================"
 service apache2 restart
 echo "================================================================"
+# Installing SSL
 echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
 read bol
 bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
@@ -80,7 +93,8 @@ if [ $bol = 'yes' ] || [ $bol = 'y' ]
     	echo "You skiped the SSL Installation...!!"
     fi
 fi
-
+# Installing Webmin
+echo "================================================================"
 echo "Want to install the Webmin Control Panel?(yes/no):"
 read bol
 bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
@@ -105,3 +119,7 @@ if [ $bol = 'yes' ] || [ $bol = 'y' ]
 fi
 echo "Installation Complete! If you had any error contact www.tysonchamp.com or"
 echo "Open a issue request on https://github.com/tysonchamp/apache-server"
+#
+# Exit clean
+#
+exit 0
