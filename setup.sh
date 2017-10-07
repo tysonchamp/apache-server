@@ -116,7 +116,7 @@ if [ $bol = 'yes' ] || [ $bol = 'y' ]
     fi
 fi
 echo "Installation Complete! If you had any error contact www.tysonchamp.com or"
-echo "Open a issue request on https://github.com/tysonchamp/apache-server"
+echo "Open a issue request on https://github.com/tysonchamp/Ubuntu-LAMP-Installer"
 #
 # Exit clean
 #
