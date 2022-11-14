@@ -44,11 +44,11 @@ echo " "
 echo "================================================================"
 apt-get install openssl -y && apt-get install apache2 -y
 echo "================================================================"
-apt-get install php5 php5-gd php5-common php5-curl php5-gmp -y && apt-get install mysql-server -y
+sudo apt-get install php php-gd php-common php-curl php-gmp libapache2-mod-php -y && sudo apt-get install mariadb-server -y
 echo "================================================================"
 apt-get install sendmail -y
 echo "================================================================"
-apt-get install phpmyadmin -y
+#apt-get install phpmyadmin -y
 #echo "Include /etc/phpmyadmin/apache.conf" | cat >> /etc/apache2/apache2.conf
 echo "================================================================"
 a2enmod rewrite
@@ -61,6 +61,19 @@ chown -R www-data:www-data /var/www/*
 chmod -R 755 /var/www/*
 echo "================================================================"
 service apache2 restart
+echo "================================================================"
+echo "Installing Mongodb"
+echo " "
+wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+sudo apt update
+sudo apt install -y mongodb-org
+sudo systemctl enable mongod
+sudo apt install php-pear -y
+sudo apt -y install php-mongodb
+sudo service mongod start
 echo "================================================================"
 # Installing SSL
 echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
