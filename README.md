@@ -1,7 +1,7 @@
 # Ubuntu LAMP Stack Installer
 
 Description:
-I had created this script for Setup Apache Webserver including php5, Mysql-Server, Webmin Control Panel and OpenSSL(with self sign SSL) in Ubuntu. Now sharing this script to help specially who have no linux knowledge. This script is really easy to use.
+I had created this script for Setup Apache Webserver including php, Mysql-Server, Mongo DB, Webmin Control Panel and OpenSSL(with self sign SSL) in Ubuntu. Now sharing this script to help specially who have no linux knowledge. This script is really easy to use.
 
 How to use this script:
 1st download all the files.
