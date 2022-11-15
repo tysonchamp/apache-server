@@ -75,6 +75,10 @@ sudo apt install php-pear -y
 sudo apt -y install php-mongodb
 sudo service mongod start
 echo "================================================================"
+echo "Installing LetsEncrypt  SSL Certificate"
+sudo apt install certbot python3-certbot-apache -y
+sudo certbot --apache
+echo "================================================================"
 # Installing SSL
 echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
 read bol
