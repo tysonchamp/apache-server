@@ -7,7 +7,8 @@ if [ -e /etc/apache2/sites-available/000-default.conf.backup ]
 			echo "<VirtualHost *:80>" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		ServerAdmin admin@$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "		DocumentRoot /var/www/$1" | cat >> /etc/apache2/sites-available/000-default.conf
-			echo "		ServerName www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
+			echo "		ServerName $1" | cat >> /etc/apache2/sites-available/000-default.conf
+			echo "		ServerAlias www.$1" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "	    <Directory /var/www/>" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "	    Options Indexes FollowSymLinks MultiViews" | cat >> /etc/apache2/sites-available/000-default.conf
 			echo "	    # changed from None to FileInfo" | cat >> /etc/apache2/sites-available/000-default.conf
