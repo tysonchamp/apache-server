@@ -17,13 +17,13 @@
 # 
 # Check to see is the user is root
 #
-if [ $( whoami | grep root | wc -l ) != 1 ];
-	then
-	echo "You need to be root to properly work this script\n"
-	echo "Please switch user to the root user using below command\n"
-	echo "sudo su"
-	exit 1
-fi
+#if [ $( whoami | grep root | wc -l ) != 1 ];
+#	then
+#	echo "You need to be root to properly work this script\n"
+#	echo "Please switch user to the root user using below command\n"
+#	echo "sudo su"
+#	exit 1
+#fi
 
 # Check if user has provided the domain name
 if [ -z $1 ]
@@ -42,16 +42,16 @@ echo "LAMP Stack with OpenSSL and phpMyAdmin"
 echo "Installation Process Starts:"
 echo " "
 echo "================================================================"
-apt-get install openssl -y && apt-get install apache2 -y
+#apt-get install openssl -y && apt-get install apache2 -y
 echo "================================================================"
-sudo apt-get install php php-gd php-common php-curl php-gmp libapache2-mod-php -y && sudo apt-get install mariadb-server -y
+#sudo apt-get install php php-gd php-common php-curl php-gmp libapache2-mod-php -y && sudo apt-get install mariadb-server -y
 echo "================================================================"
-apt-get install sendmail -y
+#apt-get install sendmail -y
 echo "================================================================"
 #apt-get install phpmyadmin -y
 #echo "Include /etc/phpmyadmin/apache.conf" | cat >> /etc/apache2/apache2.conf
 echo "================================================================"
-a2enmod rewrite
+#a2enmod rewrite
 echo "Setting up Virtual Host Configaration Files"
 echo " "
 echo "================================================================"
@@ -76,62 +76,62 @@ echo "================================================================"
 #sudo service mongod start
 #echo "================================================================"
 echo "Installing LetsEncrypt  SSL Certificate"
-sudo apt install certbot python3-certbot-apache -y
+#sudo apt install certbot python3-certbot-apache -y
 sudo certbot --apache
 echo "================================================================"
 # Installing SSL
-echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
-read bol
-bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
+#echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
+#read bol
+#bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
 
-while [ -z $bol ]
-do
-	echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
-	read bol
-	bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
-done
+#while [ -z $bol ]
+#do
+#	echo "Want to install the Self-Sign SSL cirtificate?(yes/no):"
+#	read bol
+#	bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
+#done
 
-if [ $bol = 'yes' ] || [ $bol = 'y' ]
-    then
-        echo " "
-		echo "Self-Sign SSL Installation Process Starts"
-		echo " "
-		echo "================================================================"
-		a2enmod ssl && service apache2 restart
-		echo "================================================================"
-		mkdir -p /etc/apache2/ssl
-		openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/$1.key -out /etc/apache2/ssl/$1.crt
-		echo "================================================================"
-		sh httpsconf.sh $1
-    else if [ -n "$bol" ] || [ -z "$bol" ]
-    	then
-    	echo "You skiped the SSL Installation...!!"
-    fi
-fi
+#if [ $bol = 'yes' ] || [ $bol = 'y' ]
+#    then
+#        echo " "
+#		echo "Self-Sign SSL Installation Process Starts"
+#		echo " "
+#		echo "================================================================"
+#		a2enmod ssl && service apache2 restart
+#		echo "================================================================"
+#		mkdir -p /etc/apache2/ssl
+#		openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/$1.key -out /etc/apache2/ssl/$1.crt
+#		echo "================================================================"
+#		sh httpsconf.sh $1
+#    else if [ -n "$bol" ] || [ -z "$bol" ]
+#    	then
+#    	echo "You skiped the SSL Installation...!!"
+#    fi
+#fi
 # Installing Webmin
 echo "================================================================"
 echo "Want to install the Webmin Control Panel?(yes/no):"
-read bol
-bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
+#read bol
+#bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
 
-while [ -z $bol ]
-do
-	echo "Want to install the Webmin Control Panel?(yes/no):"
-	read bol
-	bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
-done
+#while [ -z $bol ]
+#do
+#	echo "Want to install the Webmin Control Panel?(yes/no):"
+#	read bol
+#	bol="$(echo ${bol} | tr 'A-Z' 'a-z')"
+#done
 
-if [ $bol = 'yes' ] || [ $bol = 'y' ]
-    then
-        echo "Installing Webmin Control Panel and It's Dependencis"
-		echo " "
-		echo "================================================================"
-		sh webmin.sh
-    else if [ -n "$bol" ] || [ -z "$bol" ]
-    	then
-    	echo "You skiped the Webmin Control Panel Installation...!!"
-    fi
-fi
+#if [ $bol = 'yes' ] || [ $bol = 'y' ]
+#    then
+#        echo "Installing Webmin Control Panel and It's Dependencis"
+#		echo " "
+#		echo "================================================================"
+#		sh webmin.sh
+#    else if [ -n "$bol" ] || [ -z "$bol" ]
+#    	then
+#    	echo "You skiped the Webmin Control Panel Installation...!!"
+#    fi
+#fi
 echo "Installation Complete! If you had any error contact www.tysonchamp.com or"
 echo "Open a issue request on https://github.com/tysonchamp/Ubuntu-LAMP-Installer"
 #
